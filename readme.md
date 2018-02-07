@@ -24,3 +24,9 @@ aws configure
 zappa init
 zappa deploy dev
 ```
+
+## Development
+
+```
+zappa update dev
+```
