@@ -5,9 +5,9 @@ Mimicking [this](https://serverlessblog.com/)
 ```
 pyenv global 3.6.0
 pyenv virtualenv bear_words_across
+pyenv local bear_words_across
 pip install zappa flask awscli
 pip install flask-blogging
-pip install flask-login
 ```
 
 ### AWS Setup
