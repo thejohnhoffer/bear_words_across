@@ -35,6 +35,8 @@ zappa deploy dev
 - [DyanmoDB Full Access Policy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess$serviceLevelSummary?section=attached_entities)
   - attach policy to bewo-dev-ZappaLambdaExecutionRole
 
+On the [API Gateway dashboard](https://us-east-2.console.aws.amazon.com/apigateway/home) choose Resources, click Actions and choose Deploy API
+
 ## Development
 
 ```
