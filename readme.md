@@ -1,48 +1,10 @@
-Mimicking [this](https://serverlessblog.com/)
+### Setup
 
-### Pip Setup
+Read [the Wiki](https://github.com/thejohnhoffer/bewo/wiki) if copying this project to use your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints.
 
-```
-pyenv global 3.6.0
-pyenv virtualenv bear_words_across
-pyenv local bear_words_across
-pip install zappa flask awscli
-pip install flask-blogging
-```
+Otherwise, just [follow our guide](https://github.com/thejohnhoffer/bewo/wiki/Python-Setup) to set up a python environment. Then run `aws configure`.
 
-### AWS Setup
-
-[Set up AWSCLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
-
-- Add [new user](https://console.aws.amazon.com/iam/home#/users)
-  - (Optional?) Add user to `AWSLambdaFullAccess`
-  - (Optional?) Add user to `AdministratorAccess`
-  - (Optional?) Add user to `AmazonDynamoDBFullAccess`
-
-Configure local aws with new user Acess Keys:
-
-```
-aws configure
-```
-
-### Zappa deploy
-
-```
-zappa init
-zappa deploy dev
-```
-
-- [DyanmoDB Full Access Policy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess$serviceLevelSummary?section=attached_entities)
-  - attach policy to bewo-dev-ZappaLambdaExecutionRole
-- On the [API Gateway dashboard](https://us-east-2.console.aws.amazon.com/apigateway/home) choose Resources, click Actions and choose Deploy API
-- Redirect the 'dev' stage of this API to a [custom domain name](https://us-east-2.console.aws.amazon.com/apigateway/home?region=us-east-2#/custom-domain-names)
-    - Add [ACM Certificate](https://us-east-2.console.aws.amazon.com/acm/home) for your domain
-    - Download the verification CNAME record and manually apply it in your domain's DNS settings
-    - Add CNAME record to domain matching the AWS API custom domain mapping
-        - From custom domain name
-        - To `Target Domain Name`
-
-## Development
+### Development
 
 ```
 zappa update dev
