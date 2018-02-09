@@ -34,11 +34,17 @@ zappa deploy dev
 
 - [DyanmoDB Full Access Policy](https://console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess$serviceLevelSummary?section=attached_entities)
   - attach policy to bewo-dev-ZappaLambdaExecutionRole
-
-On the [API Gateway dashboard](https://us-east-2.console.aws.amazon.com/apigateway/home) choose Resources, click Actions and choose Deploy API
+- On the [API Gateway dashboard](https://us-east-2.console.aws.amazon.com/apigateway/home) choose Resources, click Actions and choose Deploy API
+- Redirect the 'dev' stage of this API to a [custom domain name](https://us-east-2.console.aws.amazon.com/apigateway/home?region=us-east-2#/custom-domain-names)
+    - Add [ACM Certificate](https://us-east-2.console.aws.amazon.com/acm/home) for your domain
+    - Download the verification CNAME record and manually apply it in your domain's DNS settings
+    - Add CNAME record to domain matching the AWS API custom domain mapping
+        - From custom domain name
+        - To `Target Domain Name`
 
 ## Development
 
 ```
 zappa update dev
 ```
+
