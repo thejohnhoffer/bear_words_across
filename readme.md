@@ -1,14 +1,15 @@
 ### Setup
 
-Read [the Wiki](https://github.com/thejohnhoffer/bewo/wiki) if **copying this project** for use with your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints. Otherwise, just [follow our guide](https://github.com/thejohnhoffer/bewo/wiki/Python-Setup) to set up a python environment and run `aws configure` with AWS Access Keys that have access to our endpoints.
+Read [the Wiki](https://github.com/thejohnhoffer/bewo/wiki) if **copying this project** for use with your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints. Otherwise, just [follow our guide to set up a python environment](https://github.com/thejohnhoffer/bewo/wiki/Python-Setup) and run `aws configure` with AWS Access Keys that have access to our endpoints.
 
 ### Development
 
-In your favorite shell, clone the main code base:
+In a bash shell, clone the code base for the `REPO`:
 
 ```
-git clone https://github.com/thejohnhoffer/bewo
-cd bewo
+REPO="https://github.com/thejohnhoffer/bearword"
+git clone $REPO
+cd bearword
 ```
 
 ### Local Testing
