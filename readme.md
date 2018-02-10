@@ -1,8 +1,8 @@
 ### Setup
 
 Welcome to a simple [serverless blog](https://serverlessblog.com/). You can:
-- [Copy this project](https://github.com/thejohnhoffer/bewo/wiki/Contributing) for use with your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints. 
-- Or, just [start contributing to this project](https://github.com/thejohnhoffer/bearword/wiki)!
+- [Copy this project](https://github.com/thejohnhoffer/bewo/wiki/Forking) for use with your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints. 
+- Or, just [start contributing to this project](https://github.com/thejohnhoffer/bearword/wiki/Contributing)!
 
 ### Development
 
