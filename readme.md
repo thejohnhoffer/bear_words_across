@@ -1,6 +1,8 @@
 ### Setup
 
-Read [the Wiki](https://github.com/thejohnhoffer/bewo/wiki) if **copying this project** for use with your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints. Otherwise, just [follow our guide to set up a python environment](https://github.com/thejohnhoffer/bearword/wiki/Python-Setup) and run `aws configure` with AWS Access Keys that have access to our endpoints.
+Either
+- [Copy this project](https://github.com/thejohnhoffer/bewo/wiki) for use with your own [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services) endpoints. 
+- Or, just [start contributing to this project](https://github.com/thejohnhoffer/bearword/wiki)
 
 ### Development
 
