@@ -4,16 +4,6 @@ Read [the Wiki](https://github.com/thejohnhoffer/bewo/wiki) if **copying this pr
 
 ### Development
 
-In a bash shell, clone the code base for the `REPO`:
-
-```
-REPO="https://github.com/thejohnhoffer/bearword"
-git clone $REPO
-cd bearword
-```
-
-### Local Testing
-
 #### Install DynamoDB
 
 If `java version` does not show a Runtime Environment `>=6.0`, [install java](https://www.java.com/en/download/), then download DynamoDB:
@@ -37,7 +27,7 @@ export FLASK_APP="blog.py"
 flask run
 ```
 
-### AWS Deployment
+#### AWS Deployment
 
 When ready, go ahead and deploy to the dev stage!
 
