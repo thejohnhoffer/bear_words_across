@@ -29,7 +29,7 @@ export FLASK_APP="blog.py"
 flask run
 ```
 
-#### AWS Deployment
+### Deployment
 
 When ready, go ahead and deploy to the dev stage!
 
