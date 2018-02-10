@@ -5,12 +5,40 @@ Read [the Wiki](https://github.com/thejohnhoffer/bewo/wiki) if **copying this pr
 ### Development
 
 In your favorite shell, clone the main code base:
+
 ```
 git clone https://github.com/thejohnhoffer/bewo
 cd bewo
 ```
 
-When you've made changes, go ahead and deploy to the dev stage!
+### Local Testing
+
+#### Install DynamoDB
+
+If `java version` does not show a Runtime Environment `>=6.0`, [install java](https://www.java.com/en/download/), then download DynamoDB:
+
+```
+wget -qO- https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz | tar xvz -C lib/dynamodb
+```
+
+#### Run locally
+
+In one shell session, start the database like this:
+
+```
+java -Djava.library.path=./lib/dynamodb/DynamoDBLocal_lib -jar lib/dynamodb/DynamoDBLocal.jar -sharedDb
+```
+
+In another shell session, start the app like this:
+```
+export BEWO_DYNAMO="http://localhost:8000"
+export FLASK_APP="blog.py"
+flask run
+```
+
+### AWS Deployment
+
+When ready, go ahead and deploy to the dev stage!
 
 ```
 zappa update dev

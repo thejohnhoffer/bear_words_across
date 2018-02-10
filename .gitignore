@@ -1,2 +1,11 @@
+# vi
 *.sw*
+# Python
+*.pyc
+*.pyo
+# DynamoDB
+*.db
+
+# Modules
+__pycache__
 bewo_blog

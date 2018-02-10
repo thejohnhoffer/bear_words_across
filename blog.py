@@ -3,13 +3,19 @@ from flask_login import LoginManager
 from flask_blogging import BloggingEngine
 from flask_blogging.dynamodbstorage import DynamoDBStorage
 from routes import setup_auth
+import os
 
 app = Flask(__name__)
 app.config.from_object("config")
 
+# Find database
+AWS_PART = 'us-east-2'
+BEWO_DYNAMO = os.environ.get('BEWO_DYNAMO', AWS_PART)
+dynamo_sources = ['endpoint_url', 'region_name']
+dyn_storage = DynamoDBStorage(**{
+    dynamo_sources[BEWO_DYNAMO == AWS_PART]: BEWO_DYNAMO,
+})
 # extensions
-# dyn_storage = DynamoDBStorage(endpoint_url='http://localhost:8000')  # local testing
-dyn_storage = DynamoDBStorage(region_name='us-east-2')
 blog_engine = BloggingEngine(app, dyn_storage)
 login_manager = LoginManager(app)
 
