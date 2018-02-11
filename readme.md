@@ -8,7 +8,7 @@ When done with either setup, you can start development.
 
 ### About
 
-This has minor changes from [a gist](https://gist.github.com/gouthambs/c0effc21d5ac37bb2317d8a4c56f4a1b) by Goutham Balaraman. This repository is the minimal version of an experimental [blogging project](github.com/bearword/bearword/).
+This is barely different from [a gist](https://gist.github.com/gouthambs/c0effc21d5ac37bb2317d8a4c56f4a1b) by Goutham Balaraman. This repository is the minimal version of an experimental [blogging project](github.com/bearword/bearword/).
 
 ### Development
 
